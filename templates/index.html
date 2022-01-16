@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+
+{% block title %}
+Весь список дел
+{% endblock %}
+
+{% block body %}
+<div class="container mt-5">
+    <h1>Добавление статьи</h1>
+
+    {% for el in articles %}
+    <div class="alert alert-info">
+        <h2>{{ el.title }}</h2>
+        <p><b>Дата создания: {{ el.date.date() }}</b></p>
+        <a href="/{{ el.id }}" class="btn btn-warning">Детальнее</a>
+    </div>
+    {% endfor %}
+        {% for ell in sas %}
+    <div class="alert alert-info">
+        <h2>{{ ell.title }}</h2>
+        
+        
+    </div>
+    {% endfor %}
+</div>
+
+{% endblock %}
